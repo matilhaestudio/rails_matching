@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jonas Scherer"]
   spec.email         = ["jonas@matilhaestud.io"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Matches atributes from one model with another one"
+  spec.description   = "Matches atributes from one model with another one"
+  spec.homepage      = "https://github.com/jonaslsl/rails_matching"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
