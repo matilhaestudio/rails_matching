@@ -1,12 +1,25 @@
-require "rails_matching/version"
+class Match < ActiveRecord::Base
+	
+	#
+	# Sets common parameters between diferent methods of matchs
+	# By default excludes common table fields as id, created at, updated at
+	# Sets id of an object as default response
+	# You can set map one param to another as:
+	# [["model1_attr1", "model2_attr1"], ["model1_attr2", "model2_attr4"]]
+	# [["band", "favorite_band"], ["age", "years"]]
+	# This is gonna be nice with one model has different attrinbute name from another model
+	#
+	def self.parametrize(key = "id", exclude_attrs = [], map_params = [])
+		exclude_attrs += %w[ id created_at updated_at ] if exclude_attrs.count == 0	
+	end
 
-module RailsMatching
-  	#
+	#
 	# Matchs one model against itself
 	# by default it excludes common table fields 
 	# as id, created at, updated at
+	# runs one model against another twice
 	# 
-	def self.same (model, key = "id", exclude_attrs = [])
+	def self.against_itself(model, key = "id", exclude_attrs = [])
 		raise "Error, first param must be an object" if !model.first.is_a? Object
 		raise "Error, first params must have at least one attribute" if model.first.attributes.count <= 0
 		
@@ -44,6 +57,53 @@ module RailsMatching
 		}
 
 		result
+	end
+
+	#
+	# Matchs one model against itself
+	# by default it excludes common table fields 
+	# as id, created at, updated at
+	# does not run one model against another twice
+	#
+	def against_itself_compact(model, key = "id", exclude_attrs = []) 
+	end
+
+	#
+	# Matchs one model against another model
+	# by default it excludes common table fields 
+	# as id, created at, updated at
+	# does not run one model against another twice
+	# required matched attributes must return true do be in the response
+	def model_against_model(model1, model2,  required_match_fields = [], key = "id", exclude_attrs = [])
+	end
+
+	#
+	# Matchs one model against another model
+	# by default it excludes common table fields 
+	# as id, created at, updated at
+	# does not run one model against another twice
+	# required matched attributes must return true do be in the response
+	def instance_against_all(instance, required_match_fields = [], key = "id", exclude_attrs = [])
+	end
+
+	#
+	# Matchs one model against another model
+	# by default it excludes common table fields 
+	# as id, created at, updated at
+	# does not run one model against another twice
+	# required matched attributes must return true do be in the response
+	#
+	def instance_against_instance(instance1, instance2, required_match_fields = [], key = "id", exclude_attrs = [])
+	end
+
+	#
+	# Matchs one model against another model
+	# by default it excludes common table fields 
+	# as id, created at, updated at
+	# does not run one model against another twice
+	# required matched attributes must return true do be in the response
+	#
+	def instance_against_instance_with_relations(instance1, instance2, relations = [], required_match_fields = [], key = "id", exclude_attrs = [])
 	end
 
 end
