@@ -7,7 +7,7 @@ RSpec.describe RailsMatching do
   end
  
   it "creates a user to run tests" do
-  	user = create(:user)
+  	user = create(:users)
   	expect user.not_to be nil
   end
 
