@@ -1,6 +1,8 @@
 require "bundler/setup"
 require "rails_matching"
-require 'active_record'
+require "active_record"
+require 'factory_girl_rails'
+require_relative "support/factory_girl"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
