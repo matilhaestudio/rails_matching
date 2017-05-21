@@ -1,8 +1,11 @@
 require "bundler/setup"
 require "rails_matching"
+require 'pp'
+require 'faker'
 require "active_record"
 require 'factory_girl_rails'
 require_relative "support/factory_girl"
+
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -15,6 +18,9 @@ RSpec.configure do |config|
   ActiveRecord::Base.establish_connection adapter: "sqlite3", database: ":memory:"
   load File.dirname(__FILE__) + '/schema.rb'
   require File.dirname(__FILE__) + '/models.rb'
+
+  Faker::Name.unique.clear # Clears used values for Faker::Name
+  Faker::UniqueGenerator.clear # Clears used values for all generators
 
 end
 

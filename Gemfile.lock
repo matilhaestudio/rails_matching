@@ -40,6 +40,8 @@ GEM
     factory_girl_rails (3.2.0)
       factory_girl (~> 3.2.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     i18n (0.8.1)
     mail (2.6.5)
       mime-types (>= 1.16, < 4)
@@ -97,6 +99,7 @@ DEPENDENCIES
   activerecord (~> 4.0.0)
   bundler (~> 1.14)
   factory_girl_rails
+  faker
   rails
   rails_matching!
   rake (~> 10.0)

@@ -12,8 +12,16 @@ RSpec.describe RailsMatching do
   end
 
   it "creates a list of users to run tests" do
-  	user = create_list(:user, 10)
-  	expect(user.count).to be(10)
+  	users = create_list(:user, 10)
+  	expect(users.count).to be(10)
+  	# pp users
   end
 
+  it "runs matches" do
+  	# 10.times {
+  	# 	user = create(:user)	
+  	# }
+   #  matchs = RailsMatching.against_itself(User.all)
+   #  pp User.all
+  end
 end
