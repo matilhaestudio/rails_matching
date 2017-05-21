@@ -32,7 +32,7 @@ module RailsMatching
 		# See if it matches with the same attribute of others instances
 
 		# Returns model key and it's percentage of match against another model like
-		# [ a1, a2, 99.9 ]
+		# [ "a1", "a2", 99.9 ]
 		# [ a1, a3, 99.9 ]
 		# [ a1, a4, 45.9 ]
 		# [ a3, a1, 99.9 ]

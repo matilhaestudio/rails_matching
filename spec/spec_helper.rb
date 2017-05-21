@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "rails_matching"
+require 'active_record'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -8,4 +9,13 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  ActiveRecord::Base.establish_connection adapter: "sqlite3", database: ":memory:"
+  load File.dirname(__FILE__) + '/schema.rb'
+  require File.dirname(__FILE__) + '/models.rb'
+
 end
+
+
+
+
