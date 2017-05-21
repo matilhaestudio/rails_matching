@@ -1,5 +1,6 @@
-class Match < ActiveRecord::Base
-	
+require "rails_matching/version"
+
+module RailsMatching
 	#
 	# Sets common parameters between diferent methods of matchs
 	# By default excludes common table fields as id, created at, updated at
