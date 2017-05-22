@@ -1,4 +1,7 @@
-# RailsMatching
+# RailsMatchingGem
+
+Use this gem to match attributes between your object instances. 
+
 
 ## Installation
 
@@ -10,15 +13,20 @@ gem 'rails_matching'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
+## Usage Examples:
 
-    $ gem install rails_matching
+```ruby
+	# Matches all instances from a model with same model
+	# Returns object id, object id that id matched against, and percentage of match
+	RailsMatching.against_itself(User.all)
+	# [ [1, 2, 33.0 ]
+	#   [1, 3, 0.0 ]
+	#   [1, 4, 88.0 ] ]
+```
 
-## Usage
 
-TODO: Write usage instructions here
 
 ## Development
 
@@ -31,7 +39,7 @@ gem install rails_matching-0.1.0.gem
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rails_matching. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jonaslsl/rails_matching. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
