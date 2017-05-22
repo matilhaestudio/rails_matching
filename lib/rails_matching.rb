@@ -23,6 +23,7 @@ module RailsMatching
 	def self.against_itself(model, key = "id", exclude_attrs = [])
 		raise "Error, first param must be an object" if !model.first.is_a? Object
 		raise "Error, first params must have at least one attribute" if model.first.attributes.count <= 0
+		raise "Error, first param must have and id" if model.first.id.nil?
 		
 		exclude_attrs += %w[ id created_at updated_at ]
 		model_attrs = model.new.attributes.keys - exclude_attrs
