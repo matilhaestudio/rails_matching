@@ -26,7 +26,14 @@ And then execute:
 	#   [1, 4, 88.0 ] ]
 ```
 
-
+```ruby
+	# Matches one instance from a model with all instances from same model
+	# Returns object id, object id that id matched against, and percentage of match
+	User.create(name: "Test", age: 22, job_title: "writer")
+	RailsMatching.instance_against_all(instance, User.all)
+	# You can also exclude attributes from match
+	RailsMatching.instance_against_all(instance, User.all, exclude_attrs: ["name"])
+```
 
 ## Development
 
