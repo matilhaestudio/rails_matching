@@ -1,6 +1,7 @@
 # RailsMatchingGem
 
 Use this gem to match attributes between your object instances. 
+It basically returns the percentage of attributes matched between two instances.
 
 
 ## Installation

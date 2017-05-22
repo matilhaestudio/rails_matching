@@ -9,8 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jonas Scherer"]
   spec.email         = ["jonas@matilhaestud.io"]
 
-  spec.summary       = "Matches atributes from one model with another one"
-  spec.description   = "Matches atributes from one model with another one"
+  spec.summary       = "Matches atributes from one instance with another one"
+  spec.description   = "Use this gem to match attributes between your object instances. 
+It basically returns the percentage of attributes matched between two instances."
   spec.homepage      = "https://github.com/jonaslsl/rails_matching"
   spec.license       = "MIT"
 
