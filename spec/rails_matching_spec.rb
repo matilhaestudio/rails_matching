@@ -26,18 +26,19 @@ RSpec.describe RailsMatching do
   context "run model against itself matches"
 
     it "Raise an error if first param is not an object" do
+      expect{ RailsMatching.against_itself(1) }.to raise_error(NoMethodError)
     end
 
     it "Raise and error if first params does not have an attibute" do
+      expect{ RailsMatching.against_itself(["1","2"]) }.to raise_error(NoMethodError)
     end
 
     it "Raise and error if first params does not have an id" do
     end
 
     it "runs matches" do
-      users = create_list(:user, 10)
-      matchs = RailsMatching.against_itself(User.all)
-      expect(matchs.lenght).not_to be(0)
+      matchs = RailsMatching.against_itself(User)
+      expect(matchs.length).not_to be(0)
     end
 
 end
