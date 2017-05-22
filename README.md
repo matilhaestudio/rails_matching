@@ -39,11 +39,12 @@ And then execute:
 ## Development
 
 ###To Do
-[ ] Use of required fields
-[ ] Finish parametrization method
-[ ] Instance against instance method
-[ ] Specs
-[ ] Use of SQL queries for large data sets
+
+- [ ] Use of required fields
+- [ ] Finish parametrization method
+- [ ] Instance against instance method
+- [ ] Specs
+- [ ] Use of SQL queries for large data sets
 
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
