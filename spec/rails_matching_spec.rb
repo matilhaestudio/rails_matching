@@ -37,7 +37,7 @@ RSpec.describe RailsMatching do
     it "runs matches" do
       users = create_list(:user, 10)
       matchs = RailsMatching.against_itself(User.all)
-      pp matchs
+      expect(matchs.lenght).not_to be(0)
     end
 
 end
