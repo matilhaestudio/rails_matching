@@ -15,7 +15,7 @@ module RailsMatching
   end
 
   def self.validates_model(model)
-    raise "Error, first param must be an object" if !model.first.is_a? Object
+    raise "Error, first param must be an object" unless model.first.is_a? Object
     raise "Error, first params must have at least one attribute" if model.first.attributes.count <= 0
     raise "Error, first param must have and id" if model.first.id.nil?  
   end
@@ -43,20 +43,16 @@ module RailsMatching
     # [ a1, a4, 45.9 ]
     # [ a3, a1, 99.9 ]
 
-    result = model.all.map{
-      |a|
-      mathed = model.all.map{
-        |b|
+    result = model.all.map{ |a|
+      mathed = model.all.map{ |b|
         #do not run againts same instance
-        if a.id != b.id then
-          matched_attrs = model_attrs.map{
-            |k|
+        if a.id != b.id
+          matched_attrs = model_attrs.map{ |k|
             a[k] == b[k] ? true : false
           }
           count = matched_attrs.count{ |e| e == true }
           percentage = ( count * 100 ) / model_attrs.count
           [ a[key], b[key], percentage ]
-        else
         end
       }
       # return without nil values
@@ -104,18 +100,15 @@ module RailsMatching
     # [ a1, a4, 45.9 ]
     # [ a3, a1, 99.9 ]
 
-    result = model.all.map{
-      |a|
+    result = model.all.map{ |a|
       #do not run againts same instance
-      if a.id != instance.id then
-        matched_attrs = model_attrs.map{
-          |attribute|
+      if a.id != instance.id
+        matched_attrs = model_attrs.map{ |attribute|
           a[attribute] == instance[attribute] ? true : false
         }
         count = matched_attrs.count{ |a| a == true }
         percentage = ( count * 100 ) / model_attrs.count
         [ instance[key], a[key], percentage ]
-      else
       end
     }
 

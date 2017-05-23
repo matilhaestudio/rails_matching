@@ -4,24 +4,24 @@ RSpec.describe RailsMatching do
 
   context "Setup"
 
-    it "has a version number" do
-      expect(RailsMatching::VERSION).not_to be nil
-    end
-   
-    it "creates a user to run tests" do
-    	user = create(:user)
-    	expect(user).to be_instance_of(User)
-    end
+  it "has a version number" do
+    expect(RailsMatching::VERSION).not_to be nil
+  end
+ 
+  it "creates a user to run tests" do
+  	user = create(:user)
+  	expect(user).to be_instance_of(User)
+  end
 
-    it "creates a list of users to run tests" do
-    	users = create_list(:user, 10)
-    	expect(users.count).to be(10)
-    end
+  it "creates a list of users to run tests" do
+  	users = create_list(:user, 10)
+  	expect(users.count).to be(10)
+  end
 
-    it "expect to users not to be the same" do
-      users = create_list(:user, 10)
-      expect(users.first.name).not_to be(users.last.name)
-    end
+  it "expect to users not to be the same" do
+    users = create_list(:user, 10)
+    expect(users.first.name).not_to be(users.last.name)
+  end
 
   context "run model against itself matches"
 
