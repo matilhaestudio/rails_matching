@@ -1,8 +1,8 @@
 # RailsMatchingGem
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3baa719452574539b3a6f12577dfa8c0)](https://www.codacy.com/app/jonas_9/rails_matching?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matilhaestudio/rails_matching&amp;utm_campaign=Badge_Grade)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3baa719452574539b3a6f12577dfa8c0)](https://www.codacy.com/app/jonas_9/rails_matching?utm_source=github.com&utm_medium=referral&utm_content=matilhaestudio/rails_matching&utm_campaign=Badge_Coverage)
+[![wercker status](https://app.wercker.com/status/13359bdddaaf91f92aba9833759a86ed/s/master "wercker status")](https://app.wercker.com/project/byKey/13359bdddaaf91f92aba9833759a86ed)
 
 Use this gem to match attributes between your object instances. 
 It basically returns the percentage of attributes matched between two instances.
