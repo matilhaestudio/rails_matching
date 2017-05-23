@@ -106,7 +106,7 @@ module RailsMatching
 	        matched_attrs = model_attrs.map{ |attribute|
 	          a[attribute] == instance[attribute] ? true : false
 	        }
-	        count = matched_attrs.count{ |a| a == true }
+	        count = matched_attrs.count{ |attribute| attribute == true }
 	        percentage = ( count * 100 ) / model_attrs.count
 	        [ instance[key], a[key], percentage ]
 	      end
