@@ -49,6 +49,8 @@ And then execute:
 - [ ] Instance against instance method
 - [ ] Specs
 - [ ] Use of SQL queries for large data sets
+- [ ] Add order method
+- [ ] Add max filter to return a max number of instances
 
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
