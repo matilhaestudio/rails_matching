@@ -10,8 +10,8 @@ module RailsMatching
   # [["band", "favorite_band"], ["age", "years"]]
   # This is gonna be nice with one model has different attrinbute name from another model
   #
-  def self.parametrize(key = "id", exclude_attrs = [], map_params = [])
-    exclude_attrs += %w[ id created_at updated_at ] if exclude_attrs.count == 0  
+  def self.parametrize(_key = "id", _exclude_attrs = [], _map_params = [])
+    exclude_attrs += %w[ id created_at updated_at ] if _exclude_attrs.count == 0  
   end
 
   def self.validates_model(model)
@@ -84,7 +84,7 @@ module RailsMatching
   # Matchs one instance against all instances from a model
   # by default it excludes common table fields 
   # as id, created at, updated at
-  def self.instance_against_all(instance, model, required_match_fields = [], key = "id", exclude_attrs = [])
+  def self.instance_against_all(instance, model, _required_match_fields = [], key = "id", exclude_attrs = [])
   	
   	validates_model(model)
   	

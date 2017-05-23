@@ -46,16 +46,19 @@ RSpec.describe RailsMatching do
     it "run matches" do
       user = User.create(name: "Test", age: 22, job_title: "writer")
       matchs = RailsMatching.instance_against_all(user, User)
+      expect(matchs.length).not_to be(0)
     end
 
     it "run matches with excluded attributes" do
       user = User.create(name: "Test", age: 22, job_title: "writer")
       matchs = RailsMatching.instance_against_all(user, User, exclude_attrs: ["name"])
+      expect(matchs.length).not_to be(0)
     end
 
     it "run matches with required fields" do
       user = User.create(name: "Test", age: 22, job_title: "writer")
       matchs = RailsMatching.instance_against_all(user, User, required_match_fields: ["age"])
+      expect(matchs.length).not_to be(0)
     end
 
 end
