@@ -40,4 +40,5 @@ It basically returns the percentage of attributes matched between two instances.
   spec.add_development_dependency "rails"
   spec.add_development_dependency "faker"
   spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "codacy-coverage"
 end
