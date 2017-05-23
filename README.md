@@ -1,5 +1,7 @@
 # RailsMatchingGem
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3baa719452574539b3a6f12577dfa8c0)](https://www.codacy.com/app/jonas_9/rails_matching?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matilhaestudio/rails_matching&amp;utm_campaign=Badge_Grade)
+
 Use this gem to match attributes between your object instances. 
 It basically returns the percentage of attributes matched between two instances.
 
