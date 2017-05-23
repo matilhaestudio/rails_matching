@@ -31,13 +31,13 @@ It basically returns the percentage of attributes matched between two instances.
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rails"
+  spec.add_dependency "activerecord", "~> 4.0.0"
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "activerecord", "~> 4.0.0"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "factory_girl_rails"
-  spec.add_development_dependency "rails"
   spec.add_development_dependency "faker"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "codacy-coverage"
