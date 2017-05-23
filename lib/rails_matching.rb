@@ -45,7 +45,7 @@ module RailsMatching
 
     result = model.all.map{ |a|
       mathed = model.all.map{ |b|
-        #do not run againts same instance
+        # do not run againts same instance
         if a.id != b.id
           matched_attrs = model_attrs.map{ |k|
             a[k] == b[k] ? true : false
@@ -101,16 +101,16 @@ module RailsMatching
     # [ a3, a1, 99.9 ]
 
     result = model.all.map{ |a|
-      #do not run againts same instance
-      if a.id != instance.id
-        matched_attrs = model_attrs.map{ |attribute|
-          a[attribute] == instance[attribute] ? true : false
-        }
-        count = matched_attrs.count{ |a| a == true }
-        percentage = ( count * 100 ) / model_attrs.count
-        [ instance[key], a[key], percentage ]
-      end
-    }
+	      #do not run againts same instance
+	      if a.id != instance.id
+	        matched_attrs = model_attrs.map{ |attribute|
+	          a[attribute] == instance[attribute] ? true : false
+	        }
+	        count = matched_attrs.count{ |a| a == true }
+	        percentage = ( count * 100 ) / model_attrs.count
+	        [ instance[key], a[key], percentage ]
+	      end
+	    }
 
     result.compact
 
