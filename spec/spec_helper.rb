@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "rails_matching"
+require 'simplecov'
 require 'pp'
 require 'faker'
 require "active_record"
@@ -8,6 +9,8 @@ require_relative "support/factory_girl"
 
 
 RSpec.configure do |config|
+  
+  SimpleCov.start
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
