@@ -89,7 +89,7 @@ module RailsMatching
   	validates_model(model)
   	
   	exclude_attrs += %w[ id created_at updated_at ]
-    model_attrs = model.new.attributes.keys - exclude_attrs
+		model_attrs = model.new.attributes.keys - exclude_attrs
 
     # For each instance of a model
     # Gets its atributes
@@ -100,8 +100,8 @@ module RailsMatching
     # [ a1, a4, 45.9 ]
     # [ a3, a1, 99.9 ]
 
-    result = model.all.map{ |a|
-	      #do not run againts same instance
+		result = model.all.map{ |a|
+	      # do not run againts same instance
 	      if a.id != instance.id
 	        matched_attrs = model_attrs.map{ |attribute|
 	          a[attribute] == instance[attribute] ? true : false
@@ -112,7 +112,7 @@ module RailsMatching
 	      end
 	    }
 
-    result.compact
+		result.compact
 
   end
 
